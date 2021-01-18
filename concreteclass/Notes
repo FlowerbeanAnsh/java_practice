@@ -1,0 +1,56 @@
+List :data structure
+      1) simple 2) compound
+      1) simple : array
+      2) compound : i) linear: list,stack,queue
+                    ii) Non-linear: tree, graph
+
+      requirements for ds:
+      1) size should be dyanmic
+      2) same type of elements,sequentially
+
+      -------------------------------------------------
+                      collection framework
+          List : ArrayList, LinkedList
+         --Arraylist increase its size by req
+         -- LinkedList  : it is link of the node( additions of nodes)
+                        :it stores data in non-continous allocation
+                         Node: elements of all data structures
+                              i) data
+                              ii) link to next node
+
+ -------------------------------------------------------------------------
+ ----------------------------------------------------------------------------
+Algorithm :
+           i ) Basic req of an algorithm ->
+           1) Every algorithm should have finite steps
+            and should be properly defined
+           2) should always produce output
+           -------------------------------------
+           ii) Measured of an algo:
+           Time Complexity                        Memory complexity
+
+          Number of steps in
+          execution.
+
+          f(n) : function on the input
+          size
+          (n-> input size)
+
+
+          5 notations --
+          Big -O , Big-omega , theta, small-o , small omega
+                    Big - O -- upper bound
+                    1) constant time: O(1)
+                              means 0 of 1
+                    2)  linear time :O(n),O(n/2)
+                      no of inputs = no of sets
+
+                    3) Quadratic :
+                     O(n) * O(n) ---> O(n^2)
+
+
+
+
+
+
+
