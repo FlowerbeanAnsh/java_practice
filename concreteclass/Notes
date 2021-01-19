@@ -38,15 +38,21 @@ Algorithm :
 
 
           5 notations --
-          Big -O , Big-omega , theta, small-o , small omega
+          Big -Oh , Big-omega , theta, small-Oh , small omega
                     Big - O -- upper bound
                     1) constant time: O(1)
                               means 0 of 1
                     2)  linear time :O(n),O(n/2)
-                      no of inputs = no of sets
+                      no of inputs = no of steps
 
-                    3) Quadratic :
+                    3) Quadratic/ponynomial  :
                      O(n) * O(n) ---> O(n^2)
+
+                     4) logarithmic O(logn)
+                     5) O(n^2)
+
+
+
 
 
 
