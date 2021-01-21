@@ -49,7 +49,7 @@ Algorithm :
                      O(n) * O(n) ---> O(n^2)
 
                      4) logarithmic O(logn)
-                     5) O(n^2)
+                      5) O(n^2)
 
 
 
