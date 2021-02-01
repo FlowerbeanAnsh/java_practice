@@ -53,6 +53,32 @@ Algorithm :
 
 
 
+LinkedList:
+
+
+
+
+Why not Array ?
+
+(A) size is fixed ( modification insert/delete) -- O(n)
+(B) Continuous Memory
+
+To solve these problems we have LinkedList and ArrayList
+
+What we can do using LinkedList:
+1. single - Linked(singly LinkedList)
+
+1) insert( add a node)
+       i) at the beginning  O(1)
+       ii ) at the end O(n)
+            for tail O(1)
+       iii ) in the middle O(n)
+--> here we can not go to previous nodes
+
+
+
+
+
 
 
 
