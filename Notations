@@ -1,0 +1,51 @@
+         Notations (evaluation of algebraic expression)
+
+         -- in-fix
+         -- post-fix
+         -- post-fix
+
+        In-fix Notaion--
+         <operand> <opeartor> < operand>
+           x      +  y
+
+          pre-fix           post fix
+                            (((a+b)*c) / d)
+          + ab                ab+c*d/
+          ab
+
+          prefix is also known as polish notation.
+
+ -------------------------------------------------------------------------------------
+
+        post fix--
+        or Reverse Polish notation(RPN)
+
+   (A-(B/C + CD % E * F)/G)* H)
+
+   Infix char |    Stack             |    Equivalent Postfix Expression
+              |                      |      (RPN)
+   (scan)     |                      |
+ -----------  |    -------------     |       ----------------------------------
+   (               (
+   A              (                           A
+   -             (-                          A
+   (              (-(                          A
+   B              (-(/                        AB
+   /              (-(/                        AB
+   C              (-(/                        ABC 
+
+1)Algorithm to covert an i fix notation to postfix notation(RPN)
+step 1. Add ")" on to the stack.
+step 3. Repeat untill each character in thr infix notation is scanned
+5           - IF a "(" is scanned , push it into the stack.
+6             -IF an operand( whether a digit or  a character) is scanned , add it to
+the postfix expresssion.
+7               -IF a ")" is  scanned, then
+                a) Repeatdly pop from the stack and add it to thr postfix expression
+                until a "(" is found.
+                b) discard the opening parantheses from the stack and do not add it
+                  to the postfix expression.
+Step 4. Repeatedly pop from the stack and add it to the postfix expression until the stack is
+empty.
+step 5. STOP
+
