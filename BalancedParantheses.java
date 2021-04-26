@@ -1,36 +1,48 @@
-import java.util.Stack;
+import java.util.Scanner;
 
 public class BalancedParantheses {
-    public void check(char[] str,int len){
-        Stack<Integer> stack = new Stack<>();
-        int t;
-        t = -1;
-        for (int i = 0; i < str.length; i++) {
-            if(str[i] == '('){
-                t = t + 1;
-                stack.push(i);
+    int top = -1;
+
+    public void check(char[] s, char[] stack) {
+
+        for (int i = 0; i < s.length; i++) {
+
+            if (s[i] == '(' || s[i] == '[' || s[i] == '{') {
+                top = top + 1;
+                stack[top] = s[i];
             }
-            if(str[i]==')' && str[t]=='('){
-                stack.pop();
-                t = t - 1;
+            try {
+                if (s[i] == ')' || s[i] == ']' || s[i] == '}'  && stack[top] == '(' || stack[top] == '{' || stack[top] == '[') {
+                    top = top - 1;
+                }
+            } catch (Exception e) {
+                top = 100000;
             }
-        }
-        if(t== -1){
-            System.out.println("Balanced parentheses");
-        }
-        else{
-            System.out.println("Unbalanced parentheses");
         }
 
+            if (top == -1) {
+                System.out.println("Balanced");
+            } else {
+                System.out.println("Unbalanced");
+            }
+
+        }
     }
-}
+
 
 class Main{
     public static void main(String[] args) {
-        char[] str = {'(' , 'a' + 'b' + ')' , '(' , ')'};
-        //Stack<Integer> stack = new Stack<>();
+        Scanner kb = new Scanner(System.in);
+        char[] stack = new char[200];
         BalancedParantheses obj = new BalancedParantheses();
-        obj.check(str,6);
+        int t = kb.nextInt();
+        for (int i = 0; i < t; i++) {
+
+            String str = kb.next();
+            char[] s = str.toCharArray();
+            obj.check(s,stack);
+        }
+
         
 
     }
